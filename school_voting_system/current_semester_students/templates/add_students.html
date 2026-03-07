@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Add Students
+{% endblock %}
+
+{% block content %}
+    <h1>Add Students</h1>
+    <h3>Note:</h3>
+    <ul>
+        <li>Upload only .csv file containing the data of students this semester</li>
+        <li>Set the columns of the .csv file in this order (student_id, first_name, last_name, course, year, email, phone)</li>
+    </ul>
+    {% if error %}
+        <h2>Wrong Columns/Headers naming. Follow (student_id, first_name, last_name, course, year, email, phone)</h2>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{add_students_form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
