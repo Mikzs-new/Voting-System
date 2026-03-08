@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'voters',
     'current_semester_students',
     'voting',
+    'running_candidates',
+    'voting_history',
+    'facilitators'
 ]
 
 MIDDLEWARE = [
