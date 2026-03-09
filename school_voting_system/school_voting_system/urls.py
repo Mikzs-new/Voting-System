@@ -21,5 +21,6 @@ urlpatterns = [
     path('facilitator/', include('current_semester_students.urls')),
     path('', include('voters.urls')),
     path('admin/', admin.site.urls),
-    path('voting/', include('voting.urls'))
+    path('voting/', include('voting.urls')),
+    path('api/', include('api.urls')), 
 ]
