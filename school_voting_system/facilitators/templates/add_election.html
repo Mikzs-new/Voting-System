@@ -7,11 +7,11 @@ Add Election
 {% block content %}
     <form method="POST">
         {% csrf_token %}
-        {{add_election_form.as_p}}<br>
+        {{election_form.as_p}}
 
-        <label for="position">Add Position</label><br>
+        <label for="position">Add Position</label>
         <input type="text" id="position"><br>
-        <label for="seat_count">Seat Count</label><br>
+        <label for="seat_count">Seat Count</label>
         <input type="number" id="seat_count" min="1" value="1"><br>
         <button type="button" onclick="add_position()">Add Position</button><br>
 
@@ -23,16 +23,22 @@ Add Election
             <option value="3">3rd Year</option>
             <option value="4">4th Year</option>
         </select><br>
+        <button type="button" onclick="add_level()">Add Level</button>
+        <button type="button" onclick="add_all_level()">Add All</button><br>
+
         <label for="course">Course</label>
         <select name="course" id="course">
-            {% for course in courses%}
-            <option value="{{course.id}}">{{course.title}}</option>
+            {% for course in courses %}
+                <option value="{{course.id}}">{{course.name}}</option>
             {% endfor %}
-        </select>
+        </select><br>
+        <button type="button" onclick="add_course()">Add Course</button>
+        <button type="button" onclick='add_all_course()'>Add All</button><br>
+        
         <input type="hidden" name="positions" id="positions">
-        <input type="hidden" name="year_levels" id="year_level">
+        <input type="hidden" name="year_levels" id="year_levels">
         <input type="hidden" name="courses" id="course">
         <button onclick="create_election()" type="submit">Submit</button>
     </form>
-    <script src="../static/facilitators/js/add_election.js"></script>
+    <script src="{% static 'facilitators/js/add_election.js' %}"></script>
 {% endblock %}

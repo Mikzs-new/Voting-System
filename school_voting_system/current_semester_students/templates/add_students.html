@@ -5,11 +5,19 @@
 {% endblock %}
 
 {% block content %}
+    {% if not missing_values.empty %}
+    <h1>Students that has missing values</h1>
+    <ul>
+        {% for _,row in missing_values.iterrows %}
+            <li>{{row.student_id}} - {{row.first_name}} {{row.last_name}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     <h1>Add Students</h1>
     <h3>Note:</h3>
     <ul>
         <li>Upload only .csv file containing the data of students this semester</li>
-        <li>Set the columns of the .csv file in this order (student_id, first_name, last_name, course, year, email, phone)</li>
+        <li>Set the columns of the .csv file in this order (student_id, first_name, last_name, course, year, email)</li>
     </ul>
     {% if error %}
         <h2>Wrong Columns/Headers naming. Follow (student_id, first_name, last_name, course, year, email, phone)</h2>
