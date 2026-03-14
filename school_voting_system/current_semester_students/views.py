@@ -20,13 +20,12 @@ def add_students(request):
                 for _, row in students_df.iterrows():
                     if not Student.objects.filter(student_id=row['student_id']).exists():
                         students_to_create.append(Student(
-                            student_id=row['student_id'],
+                            student_school_id=row['student_id'],
                             first_name=row['first_name'],
                             last_name=row['last_name'],
                             course=row['course'],
-                            year=row['year'],
-                            email=row['email'],
-                            phone=row['phone']
+                            year_level=row['year'],
+                            email=row['email']
                         ))
                         User.objects.create_user(
                             username=row['student_id'],
@@ -57,7 +56,6 @@ def validate_csv(students_df):
         'last_name',
         'course',
         'year',
-        'email',
-        'phone'
+        'email'
     ]
     return list(students_df.columns) == required_columns

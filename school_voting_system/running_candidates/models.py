@@ -5,7 +5,8 @@ from voting.models import Election
 
 class Partylist(models.Model):
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(blank=True)
+    link = models.TextField(blank=True)
 
 class Position(models.Model):
     title = models.CharField(max_length=255)
@@ -37,4 +38,5 @@ class Candidate(models.Model):
         null=True
     )
     description = models.TextField(blank=True)
+    link = models.TextField(blank=True)
 
