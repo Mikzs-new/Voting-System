@@ -1,10 +1,10 @@
 from django.db import models
 
-from voting.models import SchoolElection
+from voting.models import SchoolYearElection
 
 class VotingHistory(models.Model):
     school_election = models.ForeignKey(
-        SchoolElection,
+        SchoolYearElection,
         on_delete=models.CASCADE
     )
     academic_year = models.CharField(max_length=255)

@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import *
+
+admin.site.register(Election)
+admin.site.register(SchoolYearElection)
+admin.site.register(YearLevelValidItem)
+admin.site.register(CoursesValidItem)

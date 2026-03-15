@@ -42,9 +42,8 @@ function add_all_course(){
     const courseSelect = document.getElementById('course');
     const coursesArray = Array.from(courseSelect.options);
     coursesArray.forEach(course => {
-        courses.add(course);
-    })
-    console.log(courses);
+        courses.add(parseInt(course.value));
+    });
 }
 
 function create_election(){
@@ -52,10 +51,10 @@ function create_election(){
 
     document.getElementById('positions').value = JSON.stringify(positionsArray);
 
-    const yearLevelsArray = Array.from(levels.entries());
+    const yearLevelsArray = Array.from(levels);
     document.getElementById('year_levels').value = JSON.stringify(yearLevelsArray);
 
-    const coursesArray = Array.from(courses.entries());
+    const coursesArray = Array.from(courses);
     document.getElementById('courses').value = JSON.stringify(coursesArray);
-
+    
 }

@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+School Elections
+{% endblock %}
+
+{% block content %}
+    <h1>School Elections</h1>
+    <ul>
+        {% for election in school_election %}
+            <li>{{election.title}} - {{election.academic_year}}</li>
+        {% endfor %}
+    </ul>
+    <form method="POST">
+        {% csrf_token %}
+        {{ add_school_election.as_p}}
+        <button type="submit">Add School Election</button>
+    </form>
+{% endblock %}
