@@ -43,6 +43,8 @@ class YearLevelValidItem(models.Model):
         Election,
         on_delete=models.CASCADE
     )
+    def __str__(self):
+        return str(self.year_level) + ' - ' + self.election_id.__str__()
     
 
 class CoursesValidItem(models.Model):
@@ -54,3 +56,5 @@ class CoursesValidItem(models.Model):
         Election,
         on_delete=models.CASCADE
     )
+    def __str__(self):
+        return self.course.__str__() + ' - ' + self.election_id.__str__()

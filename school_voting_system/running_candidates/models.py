@@ -1,16 +1,31 @@
 from django.db import models
 
 from current_semester_students.models import Student
-from voting.models import Election
+from voting.models import Election, SchoolYearElection
 
 class Partylist(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     link = models.TextField(blank=True)
+    school_year = models.ForeignKey(
+        SchoolYearElection,
+        on_delete=models.CASCADE,
+        null=True
+    )
+    def __str__(self):
+        return self.name
 
 class Position(models.Model):
     title = models.CharField(max_length=255)
     seat_count = models.SmallIntegerField()
+    election = models.ForeignKey(
+        Election,
+        on_delete=models.CASCADE,
+        null=True
+    )
+
+    def __str__(self):
+        return self.title + ' - ' + self.election.__str__()
 
 class Candidate(models.Model):
     student_id = models.ForeignKey(

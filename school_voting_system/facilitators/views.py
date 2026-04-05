@@ -10,6 +10,7 @@ from .forms import AddElectionForm, AddSchoolYearElectionForm
 
 from voting.models import SchoolYearElection, Election, YearLevelValidItem, CoursesValidItem
 from current_semester_students.models import Course
+from running_candidates.models import Position
 
 def add_election(request):
     if request.method == 'POST':
@@ -23,22 +24,36 @@ def add_election(request):
             qualified_courses = json.loads(request.POST.get('courses', '[]'))
             qualified_levels = json.loads(request.POST.get('year_levels', '[]'))
             
-            # Election.objects.create(
-            #     title=title, 
-            #     description=description, 
-            #     start_voting_date=election_start, 
-            #     end_voting_date=election_end,
-            #     school_election=SchoolElection.objects.order_by('-id').first(),
-            # )
+            Election.objects.create(
+                title=title, 
+                description=description, 
+                start_voting_date=election_start, 
+                end_voting_date=election_end,
+                school_election=SchoolYearElection.objects.order_by('-id').first(),
+            )
 
-            for position in positions:
-                print(position)
-            
+            election = Election.objects.order_by('-id').first()
+
+            for title,count in positions:
+                Position.objects.create(
+                    title=title,
+                    seat_count=count,
+                    election=election
+                )
+                
             for course in qualified_courses:
-                print(Course.objects.get(id=course))
-            
+                CoursesValidItem.objects.create(
+                    course=Course.objects.get(id=course),
+                    election_id=election
+                )
+
             for level in qualified_levels:
-                print(level)
+                YearLevelValidItem.objects.create(
+                    year_level=level,
+                    election_id=election
+                )
+
+
     add_election_form = AddElectionForm()
     courses = Course.objects.all().values()
     context = {
