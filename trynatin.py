@@ -1,6 +1,6 @@
 import requests
 
-url = "http://127.0.0.1:8000/api/elections/8/"
+url = "http://127.0.0.1:8000/api/elections/"
 
 response = requests.get(url)
 
@@ -16,12 +16,7 @@ else:
     print("Error:", response.status_code)
 
 # data = {
-#     'first_name': 'Cathrina',
-#     'last_name': 'Fado',
-#     'student_school_id': '2311600214',
-#     'year_level': '3rd',
-#     'email': 'cathrinafado@gmail.com',
-#     'course': 2
+#     'name': 'Bachelor of Science in Civil Engineering',
 # }
 
 # response = requests.post(url, json=data)
