@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    {% if not missing_values.empty %}
+    {% if missing_value %}
     <h1>Students that has missing values</h1>
     <ul>
         {% for _,row in missing_values.iterrows %}

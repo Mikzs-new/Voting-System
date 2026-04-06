@@ -10,6 +10,7 @@ from .models import Student, Course
 
 def add_students(request):
     add_student_form = AddCurrentSemesterStudents()
+    missing_value = False
     if(request.method == 'POST'):
         add_student_form = AddCurrentSemesterStudents(request.POST, request.FILES)
         if(add_student_form.is_valid()):
@@ -17,6 +18,7 @@ def add_students(request):
             students_df = pd.read_csv(students_csv)
             if(validate_csv(students_df)):
                 missing_values = students_df[students_df.isnull().any(axis=1)]
+                missing_value = not missing_values.empty
                 students_df.dropna(inplace=True)
                 students_to_create = []
                 for _, row in students_df.iterrows():
@@ -38,10 +40,10 @@ def add_students(request):
                         )
 
                 Student.objects.bulk_create(students_to_create)
-                return render(request, 'add_students.html', {'add_students_form': add_student_form, 'missing_values': missing_values})
+                return render(request, 'add_students.html', {'add_students_form': add_student_form, 'missing_values': missing_values, 'missing_value': missing_value})
             else:
-                return render(request, 'add_students.html', {'add_students_form': add_student_form, 'error': True}) 
-    return render(request, 'add_students.html', {'add_students_form': add_student_form})
+                return render(request, 'add_students.html', {'add_students_form': add_student_form, 'error': True, 'missing_value': missing_value}) 
+    return render(request, 'add_students.html', {'add_students_form': add_student_form, 'missing_value': missing_value})
 
 def all_students(request):
     template = loader.get_template('all_students.html')
