@@ -1,0 +1,68 @@
+2026-04-21 10:44:26,343 INFO [desktop_app] Desktop application starting
+2026-04-21 10:52:09,290 INFO [desktop_app] Desktop application starting
+2026-04-21 10:52:38,834 INFO [desktop_app] Desktop login screen accepted raw input user=aw
+2026-04-21 10:52:38,834 INFO [desktop_app] Guest desktop login accepted user=aw password_length=6
+2026-04-21 10:53:32,310 INFO [desktop_app] Desktop application starting
+2026-04-21 10:53:36,017 INFO [desktop_app] Desktop login screen accepted raw input user=awdawdawda
+2026-04-21 10:53:36,017 INFO [desktop_app] Guest desktop login accepted user=awdawdawda password_length=4
+2026-04-21 10:56:37,270 INFO [desktop_app] Desktop application starting
+2026-04-21 10:56:40,109 INFO [desktop_app] Desktop login screen accepted raw input user=qw
+2026-04-21 10:56:40,110 INFO [desktop_app] Guest desktop login accepted user=qw password_length=6
+2026-04-21 11:16:13,352 INFO [desktop_app] Desktop application starting
+2026-04-21 11:16:15,978 INFO [desktop_app] Desktop login screen accepted raw input user=qweq
+2026-04-21 11:16:15,978 INFO [desktop_app] Guest desktop login accepted user=qweq password_length=6
+2026-04-21 14:01:34,088 INFO [desktop_app] Desktop application starting
+2026-04-21 14:01:37,903 INFO [desktop_app] Desktop login screen accepted raw input user=awda
+2026-04-21 14:01:37,903 INFO [desktop_app] Guest desktop login accepted user=awda password_length=7
+2026-04-21 14:05:07,934 INFO [desktop_app] Submitting candidate user=awda student_id=5 election=8
+2026-04-21 14:05:07,953 INFO [desktop_app] Candidate synced user=awda candidate_id=4
+2026-04-21 14:05:07,953 INFO [desktop_app] Candidate synced user=awda student_id=5 election=8 candidate_id=4
+2026-04-21 14:06:37,425 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,430 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,435 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,440 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,445 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,450 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,455 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,460 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,465 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,470 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,475 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,480 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:06:37,485 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,601 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,605 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,610 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,614 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,619 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,622 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,627 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,631 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,636 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,640 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,645 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,650 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:07:55,654 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,101 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,105 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,110 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,115 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,119 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,123 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,129 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,133 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,137 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,142 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,146 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,150 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:08:37,154 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"email":["Enter a valid email address."],"course":["Incorrect type. Expected pk value, received str."]}
+2026-04-21 14:12:46,802 INFO [desktop_app] Desktop application starting
+2026-04-21 14:12:49,828 INFO [desktop_app] Desktop login screen accepted raw input user=awdaad
+2026-04-21 14:12:49,828 INFO [desktop_app] Guest desktop login accepted user=awdaad password_length=6
+2026-04-21 14:19:46,282 INFO [desktop_app] Desktop application starting
+2026-04-21 14:19:48,729 INFO [desktop_app] Desktop login screen accepted raw input user=qweqqwq
+2026-04-21 14:19:48,730 INFO [desktop_app] Guest desktop login accepted user=qweqqwq password_length=6
+2026-04-25 14:45:45,253 INFO [desktop_app] Desktop application starting
+2026-04-25 14:45:49,135 INFO [desktop_app] Desktop login screen accepted raw input user=wddawd
+2026-04-25 14:45:49,136 INFO [desktop_app] Guest desktop login accepted user=wddawd password_length=4
+2026-04-25 14:48:35,705 ERROR [desktop_app] API error method=POST endpoint=students/ status=400 body={"student_school_id":["Student Already Exists"]}

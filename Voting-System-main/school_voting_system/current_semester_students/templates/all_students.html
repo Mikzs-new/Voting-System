@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block title %}
+    All Students
+{% endblock %}
+
+{% block content %}
+    <h1>All Current Semester Students</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{student.student_id}} - {{student.first_name}} {{student.last_name}} - {{student.course}} - {{student.year}} - {{student.email}} - {{student.phone}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
